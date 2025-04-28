@@ -53,7 +53,7 @@ const Portfolio = () => {
                 </a>
                 <a
                   href={CV}
-                  download={CV}
+                  download="../assets/Syed_Saud_Jan_Resume.pdf"
                   className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors duration-300"
                 >
                   Download CV
@@ -190,10 +190,10 @@ const Portfolio = () => {
                 <div className="space-y-6">
                   <div className="border-l-4 border-blue-500 pl-4 py-2">
                     <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                      MERN STACK Developer Internship (2022)
+                      MERN STACK Developer MindGig Software House 2024
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Tech Solutions Inc. • 2022
+                      Tech Solutions Inc. 2024
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 mt-2">
                       Lead development of full-stack web applications using the
@@ -207,7 +207,7 @@ const Portfolio = () => {
                       Frontend Developer
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Digital Creations • 2021
+                      BitCode Software House Islamabad (Remote)
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 mt-2">
                       Developed and maintained client websites using React and
