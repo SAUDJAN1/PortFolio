@@ -6,213 +6,193 @@ import {
   CodeBracketIcon,
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
-import Image from "../assets/saud1.jpg";
-import CV from "../assets/Syed_Saud_Jan_Resume.pdf";
+import Image from "../assets/saud1.jpeg";
+import CV from "../assets/SyedSaudJan_Resume.pdf";
+
 const Portfolio = () => {
   return (
     <>
-      {/* Home Section */}
+      {/* ================= HOME SECTION ================= */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center pt-16"
+        className="min-h-screen flex items-center justify-center pt-20"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text Content */}
-            <div className="order-2 md:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            
+            {/* LEFT CONTENT */}
+            <div className="order-2 md:order-1 text-center md:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
                 Hi, I'm{" "}
-                <span className="text-blue-600 dark:text-blue-400">
+                <span className="text-blue-600">
                   Syed Saud Jan
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
-                MERN STACK Developer | UI/UX Enthusiast
+
+              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-700 mb-2">
+                Cross-Platform App Developer
               </h2>
-              <div className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
-                <p>
-                  I build full-stack web applications with seamless performance
-                  and modern design. Currently specializing in MongoDB,
-                  Express.js, React, and Node.js — with a strong focus on
-                  scalable APIs, clean architecture, and responsive user
-                  interfaces.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4">
+
+              <h3 className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
+                Building Scalable Mobile & Backend Systems
+              </h3>
+
+              <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-xl mx-auto md:mx-0">
+                I am a Full-Stack Mobile App Developer specializing in building
+                cross-platform applications using React Native and scalable backend
+                systems with Node.js, Express.js, and PostgreSQL. I focus on clean
+                architecture, API design, and high-performance mobile experiences
+                for both Android and iOS platforms.
+              </p>
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
                   href="mailto:SyedSaudjan@gmail.com"
-                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300"
+                  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition duration-300 text-center"
                 >
                   Contact Me
                 </a>
+
                 <a
                   href="https://github.com/SaudJan1"
-                  className="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 hover:bg-gray-100 rounded-lg font-medium transition duration-300 text-center"
                 >
                   View Projects
                 </a>
+
                 <a
                   href={CV}
-                  download="../assets/Syed_Saud_Jan_Resume.pdf"
-                  className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors duration-300"
+                  download
+                  className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition duration-300 text-center"
                 >
                   Download CV
                 </a>
               </div>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="order-1 md:order-2 flex justify-center">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 bg-blue-600 dark:bg-blue-400 rounded-full opacity-20 blur-xl animate-pulse"></div>
-                <div className="relative rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-                  <img
-                    src={Image}
-                    alt="Profile"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+       {/* RIGHT IMAGE */}
+<div className="order-1 md:order-2 flex justify-center">
+  <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+    {/* Background Glow */}
+    <div className="absolute inset-0 bg-blue-600 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+
+    {/* Profile Image */}
+    <div className="relative rounded-full overflow-hidden border-4 border-white shadow-2xl">
+      <img
+        src={Image}
+        alt="Syed Saud Jan"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+</div>
           </div>
 
-          {/* Scroll Down Indicator */}
-          <div className="mt-16 md:mt-24 flex justify-center animate-bounce">
-            <a
-              href="#about"
-              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-            >
+          {/* Scroll Indicator */}
+          <div className="mt-16 flex justify-center animate-bounce">
+            <a href="#about" className="text-gray-700 hover:text-blue-600">
               <ArrowDownCircleIcon className="h-10 w-10" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+      {/* ================= ABOUT SECTION ================= */}
+      <section id="about" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+          
+          {/* Section Header */}
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
               About Me
             </h2>
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Here's my story and what drives me in the world of technology and
-              design.
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+              My journey, experience, and technical expertise in mobile and backend development.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Personal Story */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* LEFT SIDE */}
             <div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
+              <h3 className="text-2xl font-semibold mb-6">
                 My Journey
               </h3>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
-                <p>
-                  I'm a passionate MERN Stack Developer with 1 year of
-                  experience creating scalable, high-performance web
-                  applications. My journey began when I built my first website
-                  at 15, and I've been hooked on coding ever since.
-                </p>
 
+              <div className="space-y-4 text-gray-600 text-sm sm:text-base">
                 <p>
-                  What started as a hobby turned into a career when I realized I
-                  could combine my love for problem-solving with my eye for
-                  design. I specialize in creating responsive, accessible web
-                  applications that deliver exceptional user experiences.
+                  I specialize in cross-platform mobile application development
+                  using React Native, delivering seamless user experiences across
+                  Android and iOS.
                 </p>
                 <p>
-                  When I'm not coding, you can find me cycling through the city,
-                  working on personal projects, or experimenting with
-                  photography. I believe creativity in different fields helps me
-                  think outside the box as a developer.
+                  On the backend, I design scalable RESTful APIs using Node.js
+                  and Express.js with PostgreSQL as the primary relational database.
+                </p>
+                <p>
+                  My focus is clean architecture, database schema design, secure
+                  authentication systems, and production-ready deployments.
                 </p>
               </div>
 
-              {/* Skills */}
+              {/* SKILLS */}
               <div className="mt-10">
-                <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-6">
-                  My Skills
+                <h3 className="text-2xl font-semibold mb-6">
+                  Technical Skills
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>Html Css Bootstrap</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>JavaScript/TypeScript</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>ReactJs</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>Tailwind CSS</span>
-                  </div>
-                  <div className="flex items-center">
-                    <DevicePhoneMobileIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>Responsive Design</span>
-                  </div>
 
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>Node.js & ExpressJs</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>JWT Authentication</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>Zod (TypeScript-first Schema)</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CodeBracketIcon className="h-5 w-5 text-blue-600 dark:text-blue-400 mr-2" />
-                    <span>MongoDB</span>
-                  </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm sm:text-base">
+                  {[
+                    "React Native",
+                    "Android & iOS Development",
+                    "Node.js & Express.js",
+                    "PostgreSQL",
+                    "RESTful API Design",
+                    "Authentication (JWT)",
+                    "Database Schema Design",
+                    "App Deployment",
+                    "JavaScript / TypeScript",
+                    "Responsive UI Design",
+                  ].map((skill, index) => (
+                    <div key={index} className="flex items-center">
+                      <CodeBracketIcon className="h-5 w-5 text-blue-600 mr-2" />
+                      <span>{skill}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Experience & Education */}
+            {/* RIGHT SIDE */}
             <div className="space-y-10">
+              
               {/* Experience */}
               <div>
                 <div className="flex items-center mb-6">
-                  <BriefcaseIcon className="h-8 w-8 text-blue-600 dark:text-blue-400 mr-3" />
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                    Experience
-                  </h3>
+                  <BriefcaseIcon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-semibold">Experience</h3>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="border-l-4 border-blue-500 pl-4 py-2">
-                    <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                      MERN STACK Developer MindGig Software House 2024
+                <div className="space-y-6 text-sm sm:text-base">
+                  <div className="border-l-4 border-blue-500 pl-4">
+                    <h4 className="font-medium">
+                      Full-Stack Mobile App Developer — Fast Shop Technologies Limited (july 2024 to present)
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Tech Solutions Inc. 2024
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-300 mt-2">
-                      Lead development of full-stack web applications using the
-                      MERN stack, enhancing performance and user experience,
-                      which led to a 40% increase in user engagement.
+                    <p className="text-gray-600 mt-2">
+                      Developed cross-platform mobile applications and backend
+                      systems using React Native, Node.js, and PostgreSQL.
                     </p>
                   </div>
 
-                  <div className="border-l-4 border-blue-500 pl-4 py-2">
-                    <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                      Frontend Developer
+                  <div className="border-l-4 border-blue-500 pl-4">
+                    <h4 className="font-medium">
+                     Mari Energies Company
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      BitCode Software House Islamabad (Remote)
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-300 mt-2">
-                      Developed and maintained client websites using React and
-                      Tailwind CSS, with a strong focus on accessibility,
-                      performance, and responsive design.
+                    <p className="text-gray-600 mt-2">
+                    I worked as an IT professional at Mari Energies Company, managing internal systems and networks. I assisted with hardware/software installations, troubleshooting technical issues, and supported daily IT operations. This experience enhanced my problem-solving and system management skills in a corporate environment.
                     </p>
                   </div>
                 </div>
@@ -221,26 +201,20 @@ const Portfolio = () => {
               {/* Education */}
               <div>
                 <div className="flex items-center mb-6">
-                  <AcademicCapIcon className="h-8 w-8 text-blue-600 dark:text-blue-400 mr-3" />
-                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                    Education
-                  </h3>
+                  <AcademicCapIcon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-2xl font-semibold">Education</h3>
                 </div>
 
-                <div className="border-l-4 border-blue-500 pl-4 py-2">
-                  <h4 className="text-lg font-medium text-gray-800 dark:text-white">
+                <div className="border-l-4 border-blue-500 pl-4 text-sm sm:text-base">
+                  <h4 className="font-medium">
                     B.S. Computer Science
                   </h4>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    University of Peshawar | 2020 -24
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300 mt-2">
-                    Specialized in Full-Stack Web Development with a focus on
-                    the MERN stack, building scalable and user-centric
-                    applications.
+                  <p className="text-gray-600">
+                    University of Peshawar | 2020–2024
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

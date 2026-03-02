@@ -2,6 +2,81 @@ import React from "react";
 
 const projects = [
   {
+    title: "Coins ATH – Crypto Market Tracker",
+    description:
+      "A production-ready React Native mobile application that tracks the Top 100 cryptocurrencies with real-time price updates and All-Time High (ATH) analytics. The app is deployed on both Android and iOS platforms and includes real-time advertisement integration for monetization. Designed with scalable architecture and optimized performance for mobile devices.",
+    tech: [
+      "React Native",
+      "Redux Toolkit",
+      "REST APIs",
+      "Crypto Market API",
+      "AdMob",
+      "Android",
+      "iOS"
+    ],
+    liveLinks: {
+      playStore: "https://play.google.com/store/apps/details?id=com.beanzy123.coinsath&pcampaignid=web_share",
+      appStore: "https://apps.apple.com/us/app/coins-ath/id6749264597"
+    },
+    githubLink: "https://github.com/SAUDJAN1/CoinsATH-App-"
+  },
+  {
+    title: "DXB Sell My Car UAE – Real-Time Car Marketplace",
+    description:
+      "DXB Sell My Car UAE is a real-time car selling and buying application focused exclusively on the UAE market. Users can list their cars, browse available listings, and communicate with sellers directly in-app. The app supports real-time updates, providing a seamless and fast car marketplace experience.",
+    tech: [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux Toolkit",
+      "Firebase/Socket.io (Real-Time Updates)",
+      "AdMob",
+      "Android",
+      "iOS"
+    ],
+    liveLinks: {
+      playStore: "https://play.google.com/store/apps/details?id=com.SellmycarUAE&pcampaignid=web_share",
+      appStore: "https://apps.apple.com/gb/app/dxbsellmycar/id6748740368"
+    },
+    githubLink: "https://github.com/SAUDJAN1/SellmycarUAE-Android-Latest-Version"
+  },
+ {
+  title: "United Food App – Food Ordering & Payments",
+  description:
+    "United Food App is a production-grade food ordering application available on both Android and iOS. Users can browse restaurants, view menus, place orders, make secure payments (including PayPal), and track order status in real time. The app focuses on performance, usability, and scalable real‑time functionality.",
+  tech: [
+    "React Native",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Redux Toolkit",
+    "Socket.io (Real-Time Updates)",
+    "PayPal / Payment Integration",
+    "Android",
+    "iOS"
+  ],
+ 
+  githubLink: "https://github.com/SAUDJAN1/United-Food-App"
+},
+  {
+    title: "Five Star App – Real-Time Food Delivery & Payments",
+    description:
+      "Five Star App is a comprehensive food delivery application available in England (Bradford). It supports real-time delivery tracking, secure payments, and a full-featured user and restaurant interface. This project showcases real-time database integration and scalable mobile architecture.",
+    tech: [
+      "React Native",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Redux Toolkit",
+      "Socket.io (Real-Time Delivery)",
+      "Stripe/Payment Gateway",
+      "Tailwind CSS",
+      "Android/iOS (Planned)"
+    ],
+    githubLink: "https://github.com/SAUDJAN1/Five-Star-App-Latest-Version"
+  },
+  {
     title: "Safety Course",
     description:
       "This project focuses on developing an interactive and comprehensive safety training platform aimed at educating employees and individuals on the best practices for ensuring safety in various environments, such as workplaces, construction sites, or other high-risk areas. ",
@@ -55,7 +130,6 @@ const projects = [
     title: "Task Manager App",
     description:
       "A simple yet powerful productivity tool designed to help users efficiently manage tasks, track progress, and stay organized. This app allows users to add, edit, and delete tasks",
-
     tech: ["React", "Express", "MongoDB", "JWT", "CRUD"],
     liveLink: "https://github.com/SAUDJAN1/Todo-List-App",
     githubLink: "https://github.com/SAUDJAN1/Todo-List-App",
@@ -68,8 +142,6 @@ const projects = [
     liveLink: "https://github.com/SAUDJAN1/Registration_form",
     githubLink: "https://github.com/SAUDJAN1/Registration_form",
   },
-
-  // Add more projects here
 ];
 
 const Projects = () => {
@@ -111,14 +183,39 @@ const Projects = () => {
                 </div>
               </div>
               <div className="mt-auto flex items-center gap-6">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
-                >
-                  Live Demo
-                </a>
+                {project.liveLinks ? (
+                  <>
+                    {project.liveLinks.playStore && (
+                      <a
+                        href={project.liveLinks.playStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                      >
+                        Play Store
+                      </a>
+                    )}
+                    {project.liveLinks.appStore && (
+                      <a
+                        href={project.liveLinks.appStore}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                      >
+                        App Store
+                      </a>
+                    )}
+                  </>
+                ) : project.liveLink ? (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 font-semibold hover:underline"
+                  >
+                    Live Demo
+                  </a>
+                ) : null}
                 <a
                   href={project.githubLink}
                   target="_blank"
